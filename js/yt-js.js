@@ -24,27 +24,27 @@ function search() {
         console.log(response)
         for (let item of response.items) {
             const liEl = document.createElement('li');
+
+            // li 만들기
             liEl.classList.add('search-container__list__item');
             searchContainerList.appendChild(liEl);
-
+            // img 만들기
             const imgEl = document.createElement('img');
-            const spanEl = document.createElement('span');
             imgEl.src = item.snippet.thumbnails.default.url;
+            // span 만들기
+            const spanEl = document.createElement('span');
             spanEl.textContent = item.snippet.title;
-            // figureEl.classList.add('search-container__list');
-            imgEl.addEventListener('click', e => {
-                // document.body.innerHTML = "";
+
+            liEl.addEventListener('click', e => {
                 player.innerHTML = "";
                 const iframe = document.createElement('iframe');
                 iframe.classList.add('YT-iframe');
                 iframe.src = `http://www.youtube.com/embed/${item.id.videoId}`
                 player.appendChild(iframe);
-
-
-                console.log(item.id.videoId);
             })
             liEl.appendChild(imgEl);
             liEl.appendChild(spanEl);
+
         }
 
     });

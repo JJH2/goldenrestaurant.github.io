@@ -1,17 +1,114 @@
-#googleMap__map {
-  height: 50%;
-  width: 50%;
-}
-
+/* 공통 */
 html,
 body {
-  height: 100%;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
+.content-padding {
+  padding: 50px 20px;
+  background: #aaa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#googleMap__map {
+  height: 500px;
+  width: 500px;
+}
+
 
 #googleMap__imgList {
   display: block;
   width: 100%;
   height: 500px;
+}
+
+
+
+
+/* youtube */
+
+.youtube {
+  margin: 0 auto;
+  background: pink;
+}
+.youtube__title {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 50px;
+}
+.youtube-search {
+  text-align: center;
+}
+.content-search {
+  margin: 0 auto;
+}
+.content-padding > label > input {
+  font-size: 2em;
+  padding: 20px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+.content-padding > label > button {
+  font-size: 2em;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+#player {
+  margin-top: 8px;
+  text-align: center;
+}
+
+
+.search-container__list {
+  
+}
+
+.search-container__list__item {
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 5px 0;
+  border: 1px solid black;
+  background: rgba(200, 200, 200, 0.3);
+}
+.search-container__list__item:hover {
+  background: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+}
+.search-container__list__item > img {
+  vertical-align: middle;
+}
+.search-container__list__item > span {
+  margin-left: 20px;
+  opacity: 1;
+}
+
+
+.typed_wrap {
+	display: block;
+	border: 4px solid #ecf0f1;
+	width: 290px;
+	height: auto;
+	padding: 30px;
+	
+	/*centers it in the .banner*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
 }

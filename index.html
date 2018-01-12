@@ -3,7 +3,8 @@
 
 <head>
   <title>Search</title>
-  <script src="/css/style.css"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/reset.css">
 </head>
 
 <body>
@@ -11,29 +12,30 @@
     <button class="login">로그인하기</button>
   </div>
   <!-- Googel Map Markup -->
-  <div class="googleMap">
+  <div class="googleMap content-padding">
     <div id="googleMap__map"></div>
     <div id="googleMap__imgList"></div>
   </div>
   <!-- Youtube Markup -->
-    <div class="youtube">
-      <div id="login-container" class="pre-auth">This application requires access to your YouTube account. Please
-        <a href="#" id="login-link">authorize</a> to continue.
-      </div>
-
-      <div id="youtube-search">
-        <label>
-          <input id="query" value='cats' type="text" />
-          <button id="search-button" disabled onclick="search()">Search</button>
-        </label>
-      </div>
-    
-      <div id="player"></div>
-    
-      <div id="search-container" class="search-container"></div>
-    
+  <div class="youtube content-padding">
+    <h2 class="youtube__title">Youtube 영상을 검색하세요!</h2>
+    <div id="login-container" class="pre-auth">This application requires access to your YouTube account. Please
+      <a href="#" id="login-link">authorize</a> to continue.
     </div>
 
+    <div id="youtube-search" class="youtube-search content-padding">
+      <label>
+        <input id="query" type="text" placeholder="검색어를 입력하세요!"/>
+        <button id="search-button" disabled onclick="search()">Search</button>
+      </label>
+    </div>
+  
+    <div id="player"></div>
+  
+    <div id="search-container" class="search-container"></div>
+  
+  </div>
+  
   <!-- Google Map script -->
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxf8wMrEYOOeQXD4F_WDtv-f_gReSlorg&callback=initMap"></script>
 
@@ -42,9 +44,9 @@
   <script src="js/yt-auth.js"></script>
   <script src="js/yt-js.js"></script>
   <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
-
   <!-- firebase script -->
   <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+
   <script>
     // Initialize Firebase
     var config = {
@@ -56,6 +58,7 @@
       messagingSenderId: "149899409580"
     };
     firebase.initializeApp(config);
+    
   </script>
   <script src="js/fb-js.js"></script>
   <script src="js/google.js"></script>
