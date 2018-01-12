@@ -16,29 +16,31 @@
     <div id="googleMap__imgList"></div>
   </div>
   <!-- Youtube Markup -->
-  <div class="youtube">
-    <div id="login-container" class="pre-auth">This application requires access to your YouTube account. Please
-      <a href="#" id="login-link">authorize</a> to continue.
-    </div>
+    <div class="youtube">
+      <div id="login-container" class="pre-auth">This application requires access to your YouTube account. Please
+        <a href="#" id="login-link">authorize</a> to continue.
+      </div>
 
-    <div id="buttons">
-      <label>
-                <input id="query" value='cats' type="text" />
-                <button id="search-button" disabled onclick="search()">Search</button>
-            </label>
+      <div id="youtube-search">
+        <label>
+          <input id="query" value='cats' type="text" />
+          <button id="search-button" disabled onclick="search()">Search</button>
+        </label>
+      </div>
+    
+      <div id="player"></div>
+    
+      <div id="search-container" class="search-container"></div>
+    
     </div>
-
-    <div id="search-container"></div>
-    <div id="player"></div>
-  </div>
 
   <!-- Google Map script -->
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxf8wMrEYOOeQXD4F_WDtv-f_gReSlorg&callback=initMap"></script>
 
   <!-- youtube script -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-  <script src="yt-auth.js"></script>
-  <script src="yt-js.js"></script>
+  <script src="js/yt-auth.js"></script>
+  <script src="js/yt-js.js"></script>
   <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
 
   <!-- firebase script -->
@@ -55,8 +57,8 @@
     };
     firebase.initializeApp(config);
   </script>
-  <script src="fb-js.js"></script>
-  <script src="google.js"></script>
+  <script src="js/fb-js.js"></script>
+  <script src="js/google.js"></script>
 </body>
 
 </html>

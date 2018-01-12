@@ -11,16 +11,26 @@ function search() {
     });
 
     request.execute(function (response) {
-        const listUp = document.querySelector('#search-container');
+        const listUp = document.querySelector('.search-container');
         listUp.innerHTML = "";
         const player = document.querySelector('#player');
+
+        const ulEl = document.createElement('ul');
+        ulEl.classList.add('search-container__list');
+        listUp.appendChild(ulEl);
+        const searchContainerList = document.querySelector('.search-container__list');
+
         var str = JSON.stringify(response.result);
         console.log(response)
         for (let item of response.items) {
+            const liEl = document.createElement('li');
+            liEl.classList.add('search-container__list__item');
+            searchContainerList.appendChild(liEl);
+
             const imgEl = document.createElement('img');
-            const pEl = document.createElement('p');
+            const spanEl = document.createElement('span');
             imgEl.src = item.snippet.thumbnails.default.url;
-            pEl.textContent = item.snippet.title;
+            spanEl.textContent = item.snippet.title;
             // figureEl.classList.add('search-container__list');
             imgEl.addEventListener('click', e => {
                 // document.body.innerHTML = "";
@@ -33,8 +43,8 @@ function search() {
 
                 console.log(item.id.videoId);
             })
-            listUp.appendChild(imgEl);
-            listUp.appendChild(pEl);
+            liEl.appendChild(imgEl);
+            liEl.appendChild(spanEl);
         }
 
     });
