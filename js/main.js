@@ -7,7 +7,7 @@ $(function() {
     backSpeed: 20,
     backDelay: 500,
     loop: true,
-    loopCount: 5,
+    loopCount: Infinity,
     showCursor: false,
     cursorChar: "|",
     attr: null,
