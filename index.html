@@ -28,7 +28,7 @@
   <!-- Snow Game -->
   <embed src="http://www.nny.com/holiday/snowcraftrewrite10c.swf " width="592 " height="320 ">
   <!-- Googel Map Markup -->
-  <div class="googleMap">
+  <div class="googleMap content-padding">
     <div id="googleMap__map"></div>
     <div class="modal-box ">
       <div id="googleMap__imgList"></div>
@@ -37,6 +37,7 @@
 
   </div>
   <!-- Youtube Markup -->
+
   <div class="youtube content-padding ">
     <h2 class="youtube__title ">Youtube 영상을 검색하세요!</h2>
     <div id="login-container " class="pre-auth ">This application requires access to your YouTube account. Please
@@ -54,8 +55,9 @@
 
     <div id="search-container " class="search-container "></div>
 
-  </div>
 
+  </div>
+  
   <!-- Google Map script -->
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxf8wMrEYOOeQXD4F_WDtv-f_gReSlorg&callback=initMap "></script>
 
@@ -67,6 +69,7 @@
 
   <!-- firebase script -->
   <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js "></script>
+
   <script>
     // Initialize Firebase
     var config = {
@@ -78,11 +81,14 @@
       messagingSenderId: "149899409580 "
     };
     firebase.initializeApp(config);
+    
   </script>
+
   <script src="js/fb-js.js "></script>
   <script src="js/google.js "></script>
   <script src="js/main.js "></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js "></script>
+
 </body>
 
 </html>

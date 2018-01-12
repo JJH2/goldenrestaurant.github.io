@@ -48,6 +48,7 @@ function search() {
     }
 
   });
+
 }
 
 document.querySelector('#query').addEventListener('keypress', e => {
