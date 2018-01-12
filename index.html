@@ -9,86 +9,85 @@
 
 <body>
   <div class="modal"></div>
-  <div class="google">
-    <button class="login">로그인하기</button>
-  </div>
   <!-- Main Page -->
-  <main>
+  <main class="content-padding">
     <video autoplay muted loop id="myVideo">
-        <source src=
-        "https://firebasestorage.googleapis.com/v0/b/fds-firebase-storage-eee6f.appspot.com/o/Disney's%20Frozen%20'Let%20It%20Go'%20Sequence%20Performed%20by%20Idina%20Menzel.mp4?alt=media&token=db25d68a-9988-4f95-8af8-685031e72fe1" 
-        type="video/mp4">
-      </video>
+      <source src=
+      "https://firebasestorage.googleapis.com/v0/b/fds-firebase-storage-eee6f.appspot.com/o/Disney's%20Frozen%20'Let%20It%20Go'%20Sequence%20Performed%20by%20Idina%20Menzel.mp4?alt=media&token=db25d68a-9988-4f95-8af8-685031e72fe1" 
+      type="video/mp4">
+    </video>
     <div class="main-box">
       <h1 class="main-box__question">What will you do at Winter?</h1>
       <span class="main-box__suggestion">How about <span class="main-box__typed"></span></span>
       <button id="myBtn">ENJOY</button>
-  </main>
-
-  <!-- Snow Game -->
-  <embed src="http://www.nny.com/holiday/snowcraftrewrite10c.swf " width="592 " height="320 ">
-  <!-- Googel Map Markup -->
-  <div class="googleMap content-padding">
-    <div id="googleMap__map"></div>
-    <div class="modal-box ">
-      <div id="googleMap__imgList"></div>
-      <button class="exit ">Exit</button>
-    </div>
-
-  </div>
-  <!-- Youtube Markup -->
-
-  <div class="youtube content-padding ">
-    <h2 class="youtube__title ">Youtube 영상을 검색하세요!</h2>
-    <div id="login-container " class="pre-auth ">This application requires access to your YouTube account. Please
-      <a href="# " id="login-link ">authorize</a> to continue.
-    </div>
-
-    <div id="youtube-search " class="youtube-search content-padding ">
-      <label>
-          <input id="query" type="text " placeholder="검색어를 입력하세요! "/>
-          <button id="search-button " disabled onclick="search() ">Search</button>
-        </label>
-    </div>
-
-    <div id="player "></div>
-
-    <div id="search-container " class="search-container "></div>
-
-
-  </div>
-  
-  <!-- Google Map script -->
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxf8wMrEYOOeQXD4F_WDtv-f_gReSlorg&callback=initMap "></script>
-
-  <!-- youtube script -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js "></script>
-  <script src="js/yt-auth.js "></script>
-  <script src="js/yt-js.js "></script>
-  <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady "></script>
-
-  <!-- firebase script -->
-  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js "></script>
-
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyCFJi7F_Jz4B4X8hqNF3RbcmdqsVjAHMVI ",
-      authDomain: "search-191901.firebaseapp.com ",
-      databaseURL: "https://search-191901.firebaseio.com ",
-      projectId: "youtube-search-191901 ",
-      storageBucket: " ",
-      messagingSenderId: "149899409580 "
-    };
-    firebase.initializeApp(config);
+    </main>
     
-  </script>
-
-  <script src="js/fb-js.js "></script>
-  <script src="js/google.js "></script>
-  <script src="js/main.js "></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js "></script>
-
-</body>
-
-</html>
+    <!-- Snow Game -->
+    <div class="snow-game content-padding">
+      <embed src="http://www.nny.com/holiday/snowcraftrewrite10c.swf " width="592 " height="320 ">
+    </div>
+      <!-- Googel Map Markup -->
+      <div class="googleMap content-padding">
+        <div id="googleMap__map"></div>
+        <div class="modal-box">
+          <div id="googleMap__imgList"></div>
+          <button class="exit ">Exit</button>
+        </div>
+        
+      </div>
+      <!-- Youtube Markup -->
+      
+      <div class="youtube content-padding">
+        <h2 class="youtube__title">Youtube 영상을 검색하세요!</h2>
+        <div id="login-container" class="pre-auth">This application requires access to your YouTube account. Please
+          <a href="#" id="login-link">authorize</a> to continue.
+        </div>
+        
+        <div id="youtube-search" class="youtube-search content-padding">
+          <label>
+            <input id="query" type="text" placeholder="검색어를 입력하세요!"/>
+            <button id="search-button" disabled onclick="search() ">Search</button>
+          </label>
+        </div>
+        
+        <div id="player"></div>
+        
+        <div id="search-container" class="search-container"></div>
+        
+        
+      </div>
+      
+      <!-- Google Map script -->
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxf8wMrEYOOeQXD4F_WDtv-f_gReSlorg&callback=initMap"></script>
+      
+      <!-- youtube script -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+      <script src="js/yt-auth.js"></script>
+      <script src="js/yt-js.js"></script>
+      <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+      
+      <!-- firebase script -->
+      <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js "></script>
+      
+      <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyCFJi7F_Jz4B4X8hqNF3RbcmdqsVjAHMVI",
+          authDomain: "search-191901.firebaseapp.com",
+          databaseURL: "https://search-191901.firebaseio.com",
+          projectId: "youtube-search-191901",
+          storageBucket: "",
+          messagingSenderId: "149899409580"
+        };
+        firebase.initializeApp(config);
+        
+      </script>
+      
+      <script src="js/fb-js.js"></script>
+      <script src="js/google.js"></script>
+      <script src="js/main.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+      
+    </body>
+    
+    </html>
