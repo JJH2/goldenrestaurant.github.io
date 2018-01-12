@@ -24,17 +24,11 @@ body {
 }
 
 .main-box {
-  /* background: #aaa; */
   text-align: center;
   position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 20px;
   margin: auto;
   color: #f1f1f1;
-  /* width: 100%; */
-  height: 100%;
   padding: 20px;
 }
 
@@ -56,7 +50,7 @@ body {
 
 #myBtn {
   bottom: 0;
-  margin: 20% auto auto auto;
+  margin: 50px auto auto auto;
   display: block;
   width: 200px;
   height: 50px;
@@ -73,19 +67,26 @@ body {
   color: black;
 }
 
-
+/* Snow Game */
+.snow-game {
+  display: none;
+  margin: auto;
+  text-align: center;
+}
 /* Typed */
 
 
 /* Google Map */
 
 .googleMap {
-  display: block;
+  display: none;
 }
 
 #googleMap__map {
   height: 500px;
   width: 500px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 html,
@@ -207,6 +208,7 @@ body {
 /* youtube */
 
 .youtube {
+  display: none;
   margin: 0 auto;
   background: pink;
 }
@@ -270,4 +272,12 @@ body {
   opacity: 1;
 
 
+}
+
+/* Random */
+.show{
+  display: block;
+}
+.fade{
+  display:none;
 }
