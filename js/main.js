@@ -30,18 +30,13 @@ $(function() {
 //   c = Math.floor(Math.random() * 3)
 // }
 
-// document.getElementById('myBtn').addEventListener('click', e => {
-//   const a = document.querySelectorAll('.fade');
-//   a[b].classList.remove('fade');
-//   console.log(a[b]);
-//   random2();
-//   a[c].classList.add('show');
-// })
-function erase(){
-  document.querySelectorAll('.show').classList.remove('show');
+function erase() {
+  document.querySelectorAll('.main-contents').forEach(el => {
+    el.classList.remove('show')
+  })
 }
-document.getElementById('myBtn').addEventListener('click',e=>{
-  let arr=['.googleMap','.youtube','.snow-game'];
-  console.log(arr[Math.floor(Math.random() * 3)])
-  document.querySelector(arr[Math.floor(Math.random()*3)]).classList.add('show');
+document.getElementById('myBtn').addEventListener('click', e => {
+  erase();
+  let arr = ['.googleMap', '.youtube', '.snow-game'];
+  document.querySelector(arr[Math.floor(Math.random() * 3)]).classList.add('show');
 })
