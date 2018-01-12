@@ -33,7 +33,11 @@
           map: map
         });
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
+
           return function() {
+            modalBox.classList.add('active');
+            modalBox.classList.remove('active-off');
+            modalSelector.classList.add('modal-bg');
             var panorama = new google.maps.StreetViewPanorama(
               document.getElementById('googleMap__imgList'), {
                 position: {
@@ -52,3 +56,21 @@
         })(marker, i));
       }
     }
+
+    var modalBox = document.querySelector(".modal-box");
+    var modalSelector = document.querySelector('.modal');
+
+    function modalOff() {
+      modalBox.classList.add('active-off');
+      setTimeout(function() {
+        modalBox.classList.remove('active');
+        modalSelector.classList.remove('modal-bg');
+      }, 300);;
+    }
+
+    modalBox.querySelector('.exit').addEventListener('click', e => {
+      modalOff();
+    })
+    modalSelector.addEventListener('click', e => {
+      modalOff();
+    })
